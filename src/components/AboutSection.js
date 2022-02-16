@@ -1,5 +1,5 @@
 import React from "react";
-import home1 from "../img/home1.png";
+import home1 from "../img/home1.jpg";
 
 const AboutSection = () => {
     return(
@@ -16,11 +16,11 @@ const AboutSection = () => {
                     <h2>true.</h2>
                 </div>
             </div>
-            <p>Contact us for any photography ideas that you have. We have amazing skills.</p>
+            <p>Computer science is the study of computers and computing as well as their theoretical and practical applications. Computer science applies the principles of mathematics, engineering, and logic to a plethora of functions, including algorithm formulation, software and hardware development, and artificial intelligence.</p>
             <button>Contact US</button>
         </div>
         <div className="image">
-            <img src={home1} alt="guy with a camera" />
+            <img src={home1} alt="Computer Science & Engineering." />
         </div>
     </div>
     );
