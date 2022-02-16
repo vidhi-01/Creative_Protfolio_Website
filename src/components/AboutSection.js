@@ -1,29 +1,61 @@
 import React from "react";
 import home1 from "../img/home1.jpg";
+import styled from "styled-components";
 
 const AboutSection = () => {
     return(
-        <div>
-        <div className="description">
+        <About>
+        <Description>
             <div className="title">
-                <div className="hide">
+                <Hide>
                     <h2>We work to make</h2>
-                </div>
-                <div className="hide">
+                </Hide>
+                <Hide>
                     <h2>Your <span>dreams</span> come</h2>
-                </div>
-                <div className="hide">
+                </Hide>
+                <Hide>
                     <h2>true.</h2>
-                </div>
+                </Hide>
             </div>
             <p>Computer science is the study of computers and computing as well as their theoretical and practical applications. Computer science applies the principles of mathematics, engineering, and logic to a plethora of functions, including algorithm formulation, software and hardware development, and artificial intelligence.</p>
             <button>Contact US</button>
-        </div>
-        <div className="image">
+        </Description>
+        <Image>
             <img src={home1} alt="Computer Science & Engineering." />
-        </div>
-    </div>
+        </Image>
+    </About>
     );
 };
+
+const About = styled.div`
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 10rem;
+    color: white;
+`;
+
+const Description = styled.div`
+    flex: 1;
+    padding-right: 5rem;
+    h2 {
+        font-weight: lighter;
+    }
+`;
+
+const Image = styled.div`
+    flex: 1;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 60vh;
+        object-fit: contain;
+    }
+`;
+
+const Hide = styled.div`
+    overflow: hidden;
+`;
 
 export default AboutSection;
