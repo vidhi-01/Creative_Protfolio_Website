@@ -2,13 +2,20 @@ import React from "react";
 import AboutUS from "./pages/AboutUs";
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
+import ContactUs from "./pages/ContactUs";
+import OurWork from "./pages/OurWork";
+import {Routes, Route} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <AboutUS />
+      <Routes>
+        <Route path="/" element={<AboutUS />}></Route>
+        <Route path="/work" element={<OurWork />}></Route>
+        <Route path="/contact" element={<ContactUs />}></Route>
+      </Routes>
     </div>
   );
 }
