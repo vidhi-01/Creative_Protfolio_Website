@@ -6,29 +6,31 @@ import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 
 const OurWork = () => {
-    return <Work>
-        <Movie>
-            <h2>The Athelete</h2>
-            <div className="line"></div>
-            <Link to="/">
-                <img src={athelete} alt="athelete" />
-            </Link>
-        </Movie>
-        <Movie>
-            <h2>The Racer</h2>
-            <div className="line"></div>
-            <Link to="/">
-                <img src={theracer} alt="theracer" />
-            </Link>
-        </Movie>
-        <Movie>
-            <h2>Good Time</h2>
-            <div className="line"></div>
-            <Link to="/">
-                <img src={goodtimes} alt="goodtimes" />
-            </Link>
-        </Movie>
-    </Work>;
+    return( 
+        <Work>
+            <Movie>
+                <h2>The Athelete</h2>
+                <div className="line"></div>
+                <Link to="/work/the-athlete">
+                    <img src={athelete} alt="athelete" />
+                </Link>
+            </Movie>
+            <Movie>
+                <h2>The Racer</h2>
+                <div className="line"></div>
+                <Link to="/work/the-racer">
+                    <img src={theracer} alt="theracer" />
+                </Link>
+            </Movie>
+            <Movie>
+                <h2>Good Time</h2>
+                <div className="line"></div>
+                <Link to="/work/good-times">
+                    <img src={goodtimes} alt="goodtimes" />
+                </Link>
+            </Movie>
+        </Work>
+    );
 };
 
 const Work = styled.div`
