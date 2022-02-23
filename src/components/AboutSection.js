@@ -3,6 +3,7 @@ import home1 from "../img/home1.jpg";
 import { About, Description, Image, Hide } from "../style";
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
+import Wave from "./Wave";
 
 const AboutSection = () => {
     return(
@@ -25,9 +26,9 @@ const AboutSection = () => {
         <Image>
             <motion.img variants={photoAnim} src={home1} alt="Computer Science & Engineering." />
         </Image>
+        <Wave />
     </About>
     );
 };
-
 
 export default AboutSection;
