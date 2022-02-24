@@ -6,8 +6,12 @@ import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 import { motion } from 'framer-motion';
 import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer } from '../animation';
+import useScroll from "../components/useScroll";
+import ScrollTop from "../components/ScrollTop";
 
 const OurWork = () => {
+    const [element,controls] = useScroll();
+    const [element2,controls2] = useScroll();
     return( 
         <Work style={{ background: '#fff' }} exit= "exit" variants={pageAnimation} initial="hidden" animate="show">
             <motion.div variants={sliderContainer}>
@@ -25,20 +29,21 @@ const OurWork = () => {
                     </Hide>
                 </Link>
             </Movie>
-            <Movie>
-                <motion.h2 variants={fade}>The Racer</motion.h2>
-                <motion.div className="line"></motion.div>
+            <Movie variants={fade} ref={element} animate={controls} initial="hidden">
+                <motion.h2>The Racer</motion.h2>
+                <motion.div variants={lineAnim} className="line"></motion.div>
                 <Link to="/work/the-racer">
                     <motion.img variants={photoAnim} src={theracer} alt="theracer" />
                 </Link>
             </Movie>
-            <Movie>
-                <h2>Good Time</h2>
-                <div className="line"></div>
+            <Movie variants={fade} ref={element2} animate={controls2} initial="hidden">
+                <motion.h2>Good Time</motion.h2>
+                <motion.div variants={lineAnim} className="line"></motion.div>
                 <Link to="/work/good-times">
                     <img src={goodtimes} alt="goodtimes" />
                 </Link>
             </Movie>
+            <ScrollTop />
         </Work>
     );
 };
@@ -52,7 +57,7 @@ const Work = styled(motion.div)`
     }
 `;
 
-const Movie = styled.div`
+const Movie = styled(motion.div)`
     padding-bottom: 10rem;
     .line{
         height: 0.5rem;
